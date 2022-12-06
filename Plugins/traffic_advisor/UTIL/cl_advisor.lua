@@ -186,7 +186,7 @@ if ta_masterswitch then
 		local player_s = GetPlayerFromServerId(sender)
 		local ped_s = GetPlayerPed(player_s)
 		if DoesEntityExist(ped_s) and not IsEntityDead(ped_s) then
-			if ped_s ~= GetPlayerPed(-1) then
+			if ped_s ~= PlayerPedId() then
 				if IsPedInAnyVehicle(ped_s, false) then
 					local veh = GetVehiclePedIsUsing(ped_s)
 					TA:SetTAStateForVeh(veh, newstate)
